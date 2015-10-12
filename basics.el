@@ -25,9 +25,8 @@
   (dired "/Users/andypan/Desktop/bolt/bolt/Bolt/bolt")
 )
 
-
 ;;;; key bindings
 (global-set-key (kbd "C-c c l") 'copy-line)
-(global-set-key (kbd "C-c o b") 'open-bolt-project)
+(global-set-key (kbd "C-c c b") 'open-bolt-project)
 (global-set-key (kbd "C-c c n") 'copy-line-with-number)
 (provide 'basics)
