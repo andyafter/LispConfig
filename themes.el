@@ -1,4 +1,5 @@
-;(require 'base16-ashes-dark-theme)
+(add-to-list 'load-path "~/.emacs.d/themes/base16-emacs")
+(require 'base16-ocean-dark-theme)
 
 (set-face-attribute 'default nil
 		    :family "Inconsolata"
