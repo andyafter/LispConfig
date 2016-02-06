@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/themes/base16-emacs")
-(require 'base16-ocean-dark-theme)
+(require 'base16-twilight-dark-theme)
 
 (set-face-attribute 'default nil
 		    :family "Inconsolata"
@@ -32,5 +32,6 @@
       scroll-preserve-screen-position 1)
 ;;;; end of theme and other styles
 
+(setq sp-highlight-pair-overlay nil) ; this is to disable the highlight for useless spaces
 
 (provide 'themes)

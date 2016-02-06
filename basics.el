@@ -17,12 +17,12 @@
   (goto-line original-line)
   (move-end-of-line nil)
   (deactivate-mark)
-) 
+)
 
 (defun open-bolt-project()
   "open bolt project folder"
   (interactive)
-  (dired "/Users/andypan/Desktop/bolt/bolt/Bolt/bolt")
+  (dired "~/Desktop/sefinal/SE23FT07/bolt")
 )
 
 ;;;; key bindings
@@ -30,3 +30,22 @@
 (global-set-key (kbd "C-c c b") 'open-bolt-project)
 (global-set-key (kbd "C-c c n") 'copy-line-with-number)
 (provide 'basics)
+
+
+;;; automatically new line when press enter inside paranthesis
+(defun new-line-dwim ()
+  (interactive)
+  (let ((break-open-pair (or (and (looking-back "{") (looking-at "}"))
+                             (and (looking-back ">") (looking-at "<"))
+                             (and (looking-back "(") (looking-at ")"))
+                             (and (looking-back "\\[") (looking-at "\\]")))))
+    (newline)
+    (when break-open-pair
+      (save-excursion
+        (newline)
+        (indent-for-tab-command)))
+    (indent-for-tab-command)))
+
+                                        ; this is for javascript
+(require 'flymake-jslint)
+(add-hook 'js-mode-hook 'flymake-jslint-load)
