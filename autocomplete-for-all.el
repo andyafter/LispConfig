@@ -8,5 +8,8 @@
 (setq jedi:complete-on-dot t)
 
 ;; for angularjs
+;;   /Users/panan/.emacs.d/elpa/angular-mode-20151201.1327
+()
+(add-to-list 'ac-dictionary-directories "/Users/panan/.emacs.d/elpa/angular-mode-20151201.1327/ac-dict")
 (add-to-list 'ac-modes 'angular-mode)
 (add-to-list 'ac-modes 'angular-html-mode)

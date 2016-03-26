@@ -1,5 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/themes/base16-emacs")
-(require 'base16-twilight-dark-theme)
+(add-to-list 'load-path "~/.emacs.d/elpa/spacemacs-theme-20160310.1337")
+                                        ;(require 'base16-twilight-dark-theme)
+(require 'spacemacs-dark-theme)
 
 (set-face-attribute 'default nil
 		    :family "Inconsolata"
