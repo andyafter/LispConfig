@@ -127,5 +127,10 @@
 (add-hook 'open-bolt-project
           'window-numbering-mode)
 
+(set-frame-parameter (selected-frame) 'alpha '(95 95))
+(add-to-list 'default-frame-alist '(alpha 95 95))
+
+(package-install 'cloc)
+
 (setq prelude-flyspell nil)
 (message "end for basics!!!!")
