@@ -1,12 +1,22 @@
 (add-to-list 'load-path "~/.emacs.d/themes/base16-emacs")
 (add-to-list 'load-path "~/.emacs.d/elpa/spacemacs-theme-20160310.1337")
-(require 'fogus-theme)
+(add-to-list 'load-path "~/.emacs.d/elpa/sublime-themes-20160111.122")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+
+
+;(require 'emacs-color-themes)
+(load-theme 'fogus t)
 
 
 (set-face-attribute 'default nil
-		    :family "Helvetica"
-		    ;:family "Apple Gothic"
-                    :height 140
+		    ;:family "Helvetica"
+		    ;:family "Times New Roman"
+		    ;:family "Myriad"
+		    :family "Myriad"
+                                      ;:family "Apple Gothic"
+                    :foreground "#A5B8B6"
+                    :distant-foreground "#8F9683"
+                    :height 120
                     :weight 'normal
                     :width 'normal)
 
@@ -30,6 +40,12 @@
 
 (setq sp-highlight-pair-overlay nil) ; this is to disable the highlight for useless spaces
 
+
+;; line number relative
+(require 'linum-relative)
+(linum-on)
+
+;;; done
 (message "theme configuration done!")
 
 (provide 'themes)

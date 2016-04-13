@@ -64,6 +64,7 @@
     (beginning-of-line)
     (looking-at "[[:space:]]*$")))
 
-(global-set-key (kbd "C-c m a s i") 'add-deja-item)
-(global-set-key (kbd "C-c a p s l") 'add-print-stuff-line)
-(global-set-key (kbd "C-c m a s s") 'add-deja-fast-soup)
+;(global-set-key (kbd "C-c m a s i") 'add-deja-item)
+;(global-set-key (kbd "C-c a p s l") 'add-print-stuff-line)
+;(global-set-key (kbd "C-c m a s s") 'add-deja-fast-soup)
+(message "end of deja-project  configuration")

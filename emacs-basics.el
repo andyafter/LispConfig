@@ -7,3 +7,4 @@
 (require 'magit-mode)
 (setq window-numbering-assign-func
       (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
+(message "end of emacs basics  configuration")

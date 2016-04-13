@@ -1,4 +1,10 @@
 ;;; configuration for python.el
+(setq auto-mode-alist
+      (append '(("SConstruct\\'" . python-mode)
+		("SConscript\\'" . python-mode))
+              auto-mode-alist))
+
+(require 'pip-requirements)
 
 (defun my:ensure-python.el (&optional branch overwrite)
   "Install python.el from BRANCH.
@@ -29,3 +35,4 @@ latest version."
 (my:ensure-python.el)
 
 (provide 'python-config)
+(message "end of text python  configuration")

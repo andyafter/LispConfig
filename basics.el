@@ -68,7 +68,10 @@
 (global-set-key (kbd "C-c c o") 'open-deja-product-project)
 (global-set-key (kbd "C-c c s") 'open-deja-product-stock-project)
 (global-set-key (kbd "C-c c n") 'copy-line-with-number)
-(global-set-key (kbd "C-c a c l") 'console-log)
+;(global-set-key (kbd "C-c a c l") 'console-log)
+
+
+;; to load mode-line-config file
 
 (provide 'basics)
 
@@ -115,15 +118,20 @@
 
 
 
-  ;; below is the configuration for prelude flycheck
 
-  ;; hooks for linumber after any mode is on
-  (add-hook 'projectile-find-file-hook
-            'linum-mode)
 
-  (add-hook 'find-file-hook
-            'linum-mode)
+;; hooks for linumber after any mode is on
+(global-linum-mode t)
+;(linum-relative-on t)
 
+
+ ;; (add-hook 'projectile-find-file-hook
+ ;;            'linum-mode)
+
+ ;;  (add-hook 'find-file-hook
+ ;;            'linum-mode)
+
+;; below is the configuration for prelude flycheck
 (add-hook 'open-bolt-project
           'window-numbering-mode)
 
